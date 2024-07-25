@@ -1,4 +1,15 @@
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Hi from root layout",
+  description: "Description from root layout",
+  openGraph: {
+    lastName: "Singh",
+    firstName: "Ashish",
+    type: "profile",
+  },
+};
 
 export default function RootLayout({
   children,
