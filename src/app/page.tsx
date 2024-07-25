@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { todo } from "node:test";
+
 async function getTodos() {
   await wait(2000);
   return fetch("https://jsonplaceholder.typicode.com/todos").then((response) =>
@@ -12,7 +15,13 @@ export default async function Home() {
   return (
     <>
       <h1>Todos</h1>
-      <p>{todos.length}</p>
+      <ul>
+        {todos.map((todo) => (
+          <li key={todo.id}>
+            <Link href={`todos/4${todo.id}`}>{todo.title}</Link>
+          </li>
+        ))}
+      </ul>
     </>
   );
 }
