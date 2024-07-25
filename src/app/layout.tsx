@@ -7,23 +7,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <h1>hi</h1>
-        <nav>
-          <ul>
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>
-              <Link href="/about">About</Link>
-            </li>
-            <li>
-              <Link href="/team">team</Link>
-            </li>
-          </ul>
-        </nav>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
